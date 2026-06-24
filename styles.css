@@ -690,6 +690,7 @@ code {
   }
 
   .site-header {
+    position: static;
     align-items: start;
     flex-direction: column;
     gap: 14px;
@@ -753,11 +754,24 @@ code {
   }
 
   .project-feature {
-    padding: 12px;
+    gap: 24px;
+    padding: 16px;
   }
 
   .project-media-gallery {
     grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 6px;
+  }
+
+  .media-frame {
+    overflow: hidden;
+  }
+
+  .media-frame figcaption {
+    position: static;
+    padding: 12px 14px;
+    background: #fff;
   }
 
   .media-large img {
@@ -787,6 +801,46 @@ code {
 
   .media-scroll figcaption {
     position: static;
+  }
+
+  .project-feature:nth-child(2) .media-frame,
+  .project-feature:nth-child(3) .media-frame {
+    overflow: hidden;
+  }
+
+  .project-feature:nth-child(2) .media-frame img,
+  .project-feature:nth-child(3) .media-frame img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-feature:nth-child(2) .media-frame::after,
+  .project-feature:nth-child(3) .media-frame::after {
+    content: none;
+  }
+
+  .project-body {
+    padding: 8px 2px 4px;
+  }
+
+  .title-row {
+    gap: 12px;
+    margin-top: 2px;
+  }
+
+  .project-summary {
+    margin-top: 20px;
+  }
+
+  .tech-list {
+    gap: 12px 16px;
+    margin-top: 20px;
+  }
+
+  .project-details {
+    gap: 14px;
+    margin-top: 22px;
+    padding-top: 20px;
   }
 
   .title-row {
