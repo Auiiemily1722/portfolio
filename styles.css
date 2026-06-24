@@ -213,7 +213,6 @@ h1 {
 }
 
 .primary-action,
-.details-toggle,
 .repo-link {
   display: inline-flex;
   align-items: center;
@@ -588,25 +587,9 @@ code {
 .tech-list li:nth-child(3n)::before { background: var(--accent-teal); }
 .tech-list li:nth-child(4n)::before { background: var(--accent-violet); }
 
-.details-toggle {
-  min-height: 40px;
-  margin-top: 24px;
-  padding: 0;
-  color: var(--ink);
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-.details-toggle:hover,
-.details-toggle:focus-visible {
-  outline: none;
-  transform: translateX(3px);
-}
-
 .repo-link {
   min-height: 38px;
-  margin-top: 16px;
+  margin-top: 22px;
   padding: 0 14px;
   color: #fff;
   background: #111318;
@@ -620,17 +603,11 @@ code {
 }
 
 .project-details {
-  max-height: 0;
-  margin-top: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height var(--duration-med) var(--ease-out), opacity var(--duration-med) var(--ease-out), margin-top var(--duration-med) var(--ease-out);
-}
-
-.project-details.is-open {
-  max-height: 320px;
-  margin-top: 18px;
-  opacity: 1;
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
 }
 
 .project-details p {

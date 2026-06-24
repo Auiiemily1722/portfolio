@@ -1,5 +1,4 @@
 const revealItems = document.querySelectorAll("[data-reveal]");
-const detailButtons = document.querySelectorAll(".details-toggle");
 const mediaFrames = document.querySelectorAll(".media-frame");
 const lightbox = document.querySelector("[data-lightbox]");
 const lightboxImage = document.querySelector("[data-lightbox-image]");
@@ -34,19 +33,6 @@ function setupReveal() {
   );
 
   revealItems.forEach((item) => observer.observe(item));
-}
-
-function setupDetails() {
-  detailButtons.forEach((button) => {
-    const details = document.getElementById(button.getAttribute("aria-controls"));
-    if (!details) return;
-
-    button.addEventListener("click", () => {
-      const isOpen = details.classList.toggle("is-open");
-      button.setAttribute("aria-expanded", String(isOpen));
-      button.querySelector("span").textContent = isOpen ? "↑" : "->";
-    });
-  });
 }
 
 function closeLightbox() {
@@ -93,5 +79,4 @@ function setupLightbox() {
 }
 
 setupReveal();
-setupDetails();
 setupLightbox();
